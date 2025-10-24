@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="051aa0e2-4f5e-4a3e-9d16-bc1a616eae77" name="Changes" comment="Let pictures be taken">
-      <change afterPath="$PROJECT_DIR$/app/static/upload/.gitkeep" afterDir="false" />
+    <list default="true" id="051aa0e2-4f5e-4a3e-9d16-bc1a616eae77" name="Changes" comment="Make static/upload exist through the gitkeep">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +98,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761273054129</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Make static/upload exist through the gitkeep">
+      <option name="closed" value="true" />
+      <created>1761279753942</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1761279753942</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -118,6 +125,7 @@
     <MESSAGE value="Add remote" />
     <MESSAGE value="Move config and run modules to main directory.&#10;Fix dashboard logout href" />
     <MESSAGE value="Let pictures be taken" />
-    <option name="LAST_COMMIT_MESSAGE" value="Let pictures be taken" />
+    <MESSAGE value="Make static/upload exist through the gitkeep" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make static/upload exist through the gitkeep" />
   </component>
 </project>
