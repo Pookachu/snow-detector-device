@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="051aa0e2-4f5e-4a3e-9d16-bc1a616eae77" name="Changes" comment="Move config and run modules to main directory.&#10;Fix dashboard logout href">
-      <change afterPath="$PROJECT_DIR$/app/hardware/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/hardware/camera.py" afterDir="false" />
+    <list default="true" id="051aa0e2-4f5e-4a3e-9d16-bc1a616eae77" name="Changes" comment="Let pictures be taken">
+      <change afterPath="$PROJECT_DIR$/app/static/upload/.gitkeep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +55,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -94,7 +91,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761271659738</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Let pictures be taken">
+      <option name="closed" value="true" />
+      <created>1761273054129</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761273054129</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,6 +117,7 @@
     <MESSAGE value="Initialize repository in a different place.&#10;&#10;Make empty files for README/LICENSE" />
     <MESSAGE value="Add remote" />
     <MESSAGE value="Move config and run modules to main directory.&#10;Fix dashboard logout href" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move config and run modules to main directory.&#10;Fix dashboard logout href" />
+    <MESSAGE value="Let pictures be taken" />
+    <option name="LAST_COMMIT_MESSAGE" value="Let pictures be taken" />
   </component>
 </project>
