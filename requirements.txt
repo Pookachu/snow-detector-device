@@ -3,3 +3,4 @@ click
 flask-login
 flask-sqlalchemy
 flask
+opencv-python

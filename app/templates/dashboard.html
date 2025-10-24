@@ -1,49 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-R">
     <title>Dashboard</title>
     <style>
         body { font-family: sans-serif; padding: 20px; }
         .logout-btn { float: right; text-decoration: none; background: #d9534f; color: white; padding: 8px 15px; border-radius: 3px;}
         .controls button { font-size: 16px; padding: 10px 20px; margin-top: 20px; cursor: pointer; }
         #status-message { margin-top: 15px; font-style: italic; color: #555; }
+        /* Style for the new image */
+        #capture-image {
+            max-width: 640px;
+            width: 100%;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <a href="{{ url_for('main.logout') }}" class="logout-btn">Logout</a>
-    <h1>Welcome, {{ username }}!</h1>
+    <h1>Welcome, {{ current_user.username }}!</h1>
     <p>This is the protected device dashboard.</p>
 
     <div class="controls">
         <button id="take-picture-btn">Take Picture Now</button>
         <div id="status-message"></div>
+        <img id="capture-image" src="" alt="Latest capture" style="display:none;"/>
     </div>
 
     <script>
-        // Get references to the button and status message elements
         const takePictureBtn = document.getElementById('take-picture-btn');
         const statusMessage = document.getElementById('status-message');
+        // Get the new image element
+        const captureImage = document.getElementById('capture-image');
 
-        // Add a click event listener to the button
         takePictureBtn.addEventListener('click', () => {
             statusMessage.textContent = 'Requesting picture...';
+            captureImage.style.display = 'none'; // Hide old image
 
-            // Use the Fetch API to send a POST request to our new backend endpoint
             fetch('/take-picture', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    // We need this header for Flask-Login
+                    'X-Requested-With': 'XMLHttpRequest'
                 }
             })
-            .then(response => response.json()) // Parse the JSON response from the server
+            .then(response => response.json())
             .then(data => {
-                // Update the status message with the response from the server
                 console.log('Success:', data);
                 statusMessage.textContent = data.message;
+
+                if (data.status === 'success') {
+                    captureImage.src = data.image_url + '?t=' + new Date().getTime();
+                    captureImage.style.display = 'block';
+                }
             })
             .catch((error) => {
-                // Handle any errors
                 console.error('Error:', error);
                 statusMessage.textContent = 'Error: Could not complete request.';
             });
